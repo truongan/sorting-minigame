@@ -1,0 +1,112 @@
+<!--
+		This file is part of searching-minigame.		searching-minigame is free software: you can redistribute it and/or modify
+		it under the terms of The GNU Affero General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.		searching-minigame is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.		You should have received a copy of The GNU Affero General Public License
+		along with searching-minigame.  If not, see <http://www.gnu.org/licenses/>.--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Sorting minigame</title>    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head><body>
+<nav class="navbar navbar-expand navbar-light bg-light justify-content-between">
+	<!-- Brand and toggle get grouped for better mobile display -->
+    <a class="navbar-brand mr-auto" href="#">Sorting</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse " id="navbarSupportedContent">
+		<form class="ml-auto form-inline">
+			<div class="form-group">
+				<label>Size</label>
+				<input id="size" type="number" class="form-control mr-sm-2" placeholder="Size" value="10">
+			</div>
+		</form>
+	</div></nav><!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><div class="jumbotron">
+<h5>
+    <p>Drag and drop the buttons to sort them in ascending order. value of 1 button can be seen at any time. Button can only be moved to an empty box</p>
+</h5>
+<p><span class="label label-info">Score <span id="score" class="badge">0</span></span></p>
+<!--p>
+    <div class="alert alert-success alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong>
+    </div>
+</p-->
+</div>
+
+
+
+<div class="row justify-content-center">
+    <div class="card">
+        <div class="card-header">
+            Empty box
+        </div>
+        <div class="card-body empty-box">
+
+        </div>
+</div>
+</div>
+<div class="row list-row">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">box 0</h5>
+        </div>
+        <div class="card-body">
+            <a href="#" class="btn btn-lg btn-primary"> 1<wbr><wbr> </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">box 1</h5>
+        </div>
+        <div class="card-body">
+            <a href="#" class="btn btn-lg btn-primary"> 2<wbr><wbr> </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">box 2</h5>
+        </div>
+        <div class="card-body">
+            <a href="#" class="btn btn-lg btn-primary"> 3<wbr><wbr> </a>
+        </div>
+    </div>
+</div></body>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</html>
