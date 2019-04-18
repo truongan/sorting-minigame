@@ -20,7 +20,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head><body>
+    <style>
+      .btn {
+        width:4rem;
+      }
+      .card-body{
+        width:7rem;
+        height: 5rem;
+      }
+    </style>
+  </head>
+  <body>
 <nav class="navbar navbar-expand navbar-light bg-light justify-content-between">
 	<!-- Brand and toggle get grouped for better mobile display -->
     <a class="navbar-brand mr-auto" href="#">Sorting</a>
@@ -55,9 +65,10 @@
   </div>
 </div><div class="jumbotron">
 <h5>
-    <p>Drag and drop the buttons to sort them in ascending order. Click on button reveal their value, only value of 1 button can be seen at any time. Button can only be moved to an empty box</p>
+    <p>Drag and drop the buttons to sort them in ascending order. Click on button reveal their value, only value of 1 button can be seen at any time. Button can only be moved to an empty box. When you are done, click the button below to have your result checked.</p>
 </h5>
-<p><span class="label label-info">Score <span id="score" class="badge">0</span></span></p>
+<!-- <p><span class="label label-info">Score <span id="score" class="badge">0</span></span></p> -->
+<p><a class="btn btn-danger"> DONE </a></p>
 <!--p>
     <div class="alert alert-success alert-dismissable fade in">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -67,43 +78,47 @@
 </div>
 
 
+<div class="container-fluid ">
 
-<div class="row justify-content-center">
-    <div class="card">
-        <div class="card-header">
-            Empty box
-        </div>
-        <div class="card-body empty-box">
+  <div class="row justify-content-center mb-4">
+      <div class="card">
+          <div class="card-header">
+              Empty box
+          </div>
+          <div class="card-body empty-box">
 
-        </div>
+          </div>
+  </div>
+  </div>
+  <div class="row list-row">
+      <div class="card">
+          <div class="card-header">
+              <h5 class="card-title">box 0</h5>
+          </div>
+          <div class="card-body">
+              <a href="#" class="btn btn-lg btn-primary"> 1<wbr><wbr> </a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header">
+              <h5 class="card-title">box 1</h5>
+          </div>
+          <div class="card-body">
+              <a href="#" class="btn btn-lg btn-primary"> 2<wbr><wbr> </a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header">
+              <h5 class="card-title">box 2</h5>
+          </div>
+          <div class="card-body">
+              <a href="#" class="btn btn-lg btn-primary"> 3<wbr><wbr> </a>
+          </div>
+      </div>
+  </div>
+
 </div>
-</div>
-<div class="row list-row">
-    <div class="card">
-        <div class="card-header">
-            <h5 class="card-title">box 0</h5>
-        </div>
-        <div class="card-body">
-            <a href="#" class="btn btn-lg btn-primary"> 1<wbr><wbr> </a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h5 class="card-title">box 1</h5>
-        </div>
-        <div class="card-body">
-            <a href="#" class="btn btn-lg btn-primary"> 2<wbr><wbr> </a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h5 class="card-title">box 2</h5>
-        </div>
-        <div class="card-body">
-            <a href="#" class="btn btn-lg btn-primary"> 3<wbr><wbr> </a>
-        </div>
-    </div>
-</div></body>
+</body>
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

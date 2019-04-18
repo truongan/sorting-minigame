@@ -54,6 +54,6 @@ window.onload = function(){
 
 	new_game();
 
-    // document.querySelector('#size').addEventListener('change', new_game);
+    document.querySelector('#size').addEventListener('change', new_game);
 
 };
