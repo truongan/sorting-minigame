@@ -86,7 +86,9 @@ function new_game(){
             $('#myModal').modal('show');
         }
 
-        
+        document.querySelectorAll('.item').forEach(element => {
+            element.innerText = element.dataset['val'];
+        });
     }
 
 
