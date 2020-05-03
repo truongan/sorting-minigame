@@ -14,7 +14,6 @@ function show_button(e){
     document.querySelectorAll('.item').forEach(element => {
         element.innerText = 'x';
     });
-
     e.innerText = e.dataset['val'];
 }
 
@@ -29,49 +28,42 @@ function new_game(){
     
     for (let index = 0; index < size; index++) {
         var card = document.createElement('div');
-        card.innerHTML = '<div class=""><div class="card m-2">        <div class="card-header">            <h5 class="card-title">box ' + index + '</h5>        </div>        <div class="card-body draggable-dropzone--occupied">            <a id="btn'+ index + '" href="#" class="btn btn-lg btn-primary item" data-val="'+ Math.floor(Math.random()*size*3 + 1) +'"> x </a>        </div>    </div> </div>';
+        card.innerHTML = '<div class=""><div class="card m-2">        <div class="card-header">            <h5 class="card-title">box ' + index + '</h5>        </div>        <div class="card-body draggable-dropzone--occupied">            <a id="btn'+ index + '" href="#" class="btn btn-lg btn-primary item" data-val="'+ Math.floor(Math.random()*size*3 + 1) +'"> x </a></div></div> </div>';
         
         target.appendChild(card.firstChild);
     }
 
 
-    // const draggable = new Draggable.Droppable(document.querySelectorAll('.card-body'), {
-    //     draggable: '.drag'
-    //     ,dropzone: '.card-body'
-    // });
 
-    // draggable.on('drag:start', (e) => show_button(e.source));
-    // draggable.on('drag:move', () => console.log('drag:move'));
-    // draggable.on('drag:stop', (e) => show_button(e.source));
-
-
-    $('.item').click(function(ev){
-        show_button(ev.target);
-    })
-    $('.btn').bind('dragstart', function(event){
-        ev = event.originalEvent;
-        // show_button(ev.target);
-        ev.dataTransfer.setData('text', ev.target.id);
-        console.log(ev);
-        console.log(ev.target.id);
+    document.querySelectorAll('.item').forEach(i =>{
+        i.addEventListener('click', e => show_button(e.target));
+        i.addEventListener('dragstart', ev => {
+            ev.dataTransfer.setData('text', ev.target.id);
+            console.log(ev);
+            console.log(ev.target.id);
+        })
     });
 
-    $('.card-body').bind('dragover',function(event){
-        event.preventDefault();
-    })
-
-    $('.card-body').bind('drop',function(event){
-        ev = event.originalEvent;
-        console.log(ev);
-        // target = $(document.getElementById(ev.dataTransfer.getData('text')));
-        // parent 
-        drag = document.getElementById(ev.dataTransfer.getData('text'));
-        ev.target.appendChild(drag)
-
-        // ev.dataTransfer.clearData();
-    })
 
     
+    document.querySelectorAll('.card-body').forEach(c => {
+        c.addEventListener('drop', function(ev){
+            console.log(ev);
+    
+            if (ev.target.tagName != 'DIV') return;
+            drag = document.getElementById(ev.dataTransfer.getData('text'));
+            console.log(ev.target)
+            if (ev.target.children.length == 0){
+                ev.target.appendChild(drag);
+            }
+        });
+        c.addEventListener('dragover', (ev) => ev.preventDefault());
+    });
+
+    // $(document).on('scroll', function(ev){
+    //     console.log(ev);
+    //     console.log(new Error().stack);
+    // });
     // $('.card-body').bind('click',function(event){
     //     console.log('binded');
     // })
