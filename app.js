@@ -108,6 +108,7 @@ function new_game(){
 
         document.querySelectorAll('.item').forEach(element => {
             element.innerText = element.dataset['val'];
+            element.setAttribute('draggable', false);
         });
     }
 

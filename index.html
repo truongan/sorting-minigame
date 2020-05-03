@@ -22,10 +22,10 @@
     <![endif]-->
     <style>
       .item {
-        width:4rem;
+        width:5rem;
       }
       .card-body{
-        width:7rem;
+        /* width: 8rem; */
         height: 5rem;
       }
 
@@ -40,7 +40,7 @@
   </button>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse " id="navbarSupportedContent">
-		<form class="ml-auto form-inline">
+		<div class="ml-auto form-inline">
 			<div class="form-group">
 				<label>Size</label>
 				<input id="size" type="number" class="form-control mr-sm-2" placeholder="Size" value="6">
@@ -81,13 +81,25 @@
 
 <div id='main'>
 
-  <div class="row justify-content-center mb-4">
-    <div class="card">
-      <div class="card-header">
-        Empty box
+  <div class="row  mb-4">
+    <div class="col">
+      
+    </div>
+    <div class="col justify-content-right ">
+      
+      <div class="card flex-shrink-1 flex-grow-0">
+        <div class="card-header flex-grow-0">
+          Empty box
+        </div>
+        <div class="card-body empty-box flex-grow-0">
+          
+        </div>
       </div>
-      <div class="card-body empty-box">
-        
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="">Nháp</label>
+        <textarea class="form-control" name="" id="" rows="3"></textarea>
       </div>
     </div>
   </div>
