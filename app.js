@@ -28,7 +28,7 @@ function new_game(){
     
     for (let index = 0; index < size; index++) {
         var card = document.createElement('div');
-        card.innerHTML = '<div class=""><div class="card m-2">        <div class="card-header">            <h5 class="card-title">box ' + index + '</h5>        </div>        <div class="card-body draggable-dropzone--occupied">            <a id="btn'+ index + '" href="#" class="btn btn-lg btn-primary item" data-val="'+ Math.floor(Math.random()*size*3 + 1) +'"> x </a></div></div> </div>';
+        card.innerHTML = '<div class=""><div class="card m-2">        <div class="card-header">            <h5 class="card-title">box ' + index + '</h5>        </div>        <div class="card-body ">            <btn draggable=true id="btn'+ index + '"  class="btn btn-lg btn-primary item" data-val="'+ Math.floor(Math.random()*size*3 + 1) +'"> x </btn></div></div> </div>';
         
         target.appendChild(card.firstChild);
     }
