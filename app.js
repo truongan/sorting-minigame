@@ -19,7 +19,7 @@ function show_button(e){
 
 function new_game(){
     size = parseInt(document.querySelector('#size').value);
-    
+    max = size*6;
     var target = document.querySelector('.list-row'); 
     while(target.firstChild) target.removeChild(target.firstChild);
     
@@ -28,7 +28,7 @@ function new_game(){
     
     for (let index = 0; index < size; index++) {
         var card = document.createElement('div');
-        card.innerHTML = '<div class=""><div class="card m-2">        <div class="card-header">            <h5 class="card-title">box ' + index + '</h5>        </div>        <div class="card-body ">            <btn draggable=true id="btn'+ index + '"  class="btn btn-lg btn-primary item" data-val="'+ Math.floor(Math.random()*size*3 + 1) +'"> x </btn></div></div> </div>';
+        card.innerHTML = '<div class=""><div class="card m-2">        <div class="card-header">            <h5 class="card-title">box ' + index + '</h5>        </div>        <div class="card-body ">            <btn draggable=true id="btn'+ index + '"  class="btn btn-lg btn-primary item" data-val="'+ Math.floor(Math.random()*max - max/3) +'"> x </btn></div></div> </div>';
         
         target.appendChild(card.firstChild);
     }
@@ -60,13 +60,6 @@ function new_game(){
         c.addEventListener('dragover', (ev) => ev.preventDefault());
     });
 
-    // $(document).on('scroll', function(ev){
-    //     console.log(ev);
-    //     console.log(new Error().stack);
-    // });
-    // $('.card-body').bind('click',function(event){
-    //     console.log('binded');
-    // })
     document.querySelector('.checkbtn').onclick = function(){
         var target = document.querySelector('.list-row'); 
 
